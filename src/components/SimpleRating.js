@@ -10,7 +10,6 @@ const SimpleRating = ({ rating }) => {
     return(
         <div>
             <Box component="fieldset" mb={3} borderColor="transparent">
-                {/* <Typography component="legend">Read only</Typography> */}
                 <Rating name="half-rating-read" defaultValue={value} precision={0.5} readOnly />
                 <p>{rating} / 10</p>
             </Box>

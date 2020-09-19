@@ -7,7 +7,7 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 
-import SimpleRating from './SimpleRating'
+import ModalCard from './ModalCard'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -17,10 +17,9 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'center',
     },
     paper: {
-      backgroundColor: theme.palette.background.paper,
-      border: '2px solid #000',
+      outline: 'none',
       boxShadow: theme.shadows[5],
-      padding: theme.spacing(2, 4, 3),
+      opacity: '0.7',
     },
     
   }));
@@ -72,9 +71,7 @@ const VideoCard = forwardRef(({ movie }, ref) => {
             >
                 <Fade in={open}>
                 <div className={classes.paper}>
-                    <h2 id="transition-modal-title">{movie.title}</h2>
-                    <p id="transition-modal-description">{movie.overview}</p>
-                    <SimpleRating rating={movie.vote_average}/>
+                    <ModalCard movie={movie}/>
                 </div>
                 </Fade>
             </Modal>
