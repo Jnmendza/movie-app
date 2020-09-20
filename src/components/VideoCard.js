@@ -18,8 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
       outline: 'none',
-      boxShadow: theme.shadows[5],
-      opacity: '0.7',
+      
     },
     
   }));
